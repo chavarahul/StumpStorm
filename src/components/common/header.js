@@ -1,4 +1,7 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+import { HashLink  } from 'react-router-hash-link';
+
 
 const Header = () => {
   return (
@@ -8,9 +11,9 @@ const Header = () => {
         <span className='font-semibold  text-xl -mt-2'>Strom</span>
       </div>
       <nav className="flex  gap-[1.8vw] items-center" id='nav-part2'>
-        <h4 className='font-bold'><a href="#home" className="font-semibold">Home</a></h4>
-        <h4 className='font-bold'><a href="#about" className="font-semibold">About</a></h4>
-        <h4 className='font-bold'><a href="#contact" className="font-semibold">Contact</a></h4>
+        <h4 className='font-bold'><Link to="/" className="font-semibold">Home</Link></h4>
+        <h4 className='font-bold'><HashLink to={"/#about"} className="font-semibold">About</HashLink></h4>
+        <h4 className='font-bold'><Link to="/events" className="font-semibold">Events</Link></h4>
       </nav>
     </header>
   )

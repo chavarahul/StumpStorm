@@ -13,6 +13,7 @@
  
 :where(body, html) {
   overflow-x: hidden;
+  /* scroll-behavior: smooth; */
 }
 
 :where(body, html)::-webkit-scrollbar {
