@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    font-family: "Poppins" !important;
+
+}
+
+.animation-load{
+    animation: load 1s 1s linear ;
+    animation-iteration-count: 1;
+}
+
+#loader{
+    transition: all ease 0.7s;
+}
+
+#loader h1:nth-child(2){
+    animation-delay: 2s;
+}
+#loader h1:nth-child(3){
+    animation-delay: 3s;
+}
+
+@keyframes load {
+    0%{
+        opacity: 0;
+    }
+    10%{
+        opacity: 1;
+    }
+    90%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        animation-delay: 2s;
+    }
+}
+
+#nav-part2 h4 {
+    padding: 8px 22px;
+    border: 1px solid #0000003c;
+    border-radius: 50px;
+    font-weight: 500;
+    color: #000000bb;
+    transition: all ease 0.4s;
+    position: relative;
+    font-size: 18px;
+    overflow: hidden;
+}
+
+
+#nav-part2 h4::after{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    left: 0;
+    bottom: -100%;
+    border-radius: 50%;
+    transition: all ease 0.54s;
+}
+
+
+#nav-part2 h4:hover::after{
+    bottom: 0;
+    border-radius: 0;
+}
+#nav-part2 h4 a {
+    color: #000000bb;
+    text-decoration: none;
+    position: relative;
+    z-index: 9;
+}
+#nav-part2 h4:hover a {
+    color: #fff;
+}

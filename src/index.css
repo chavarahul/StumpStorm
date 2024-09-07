@@ -2,10 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Poppins" !important;
 }
  
 :where(body, html) {
@@ -33,10 +36,15 @@ img {
 }
 
 @layer utilities {
-  .textColor {
-    color: #ffc37b;
+  .textBgColor {
+    color: transparent;
+    background: linear-gradient(to right,orange,orangered);
+    -webkit-background-clip: text;
   }
 
+  .textColor{
+    color: #FE320A;
+  }
   .fontless {
     font-weight: 300 !important;
   }
@@ -49,9 +57,9 @@ img {
     color: #6b6891;
   }
 
-  .cardColor{
-    background-color: #1b1c1e;
-  }
+ .bgLinear{
+  background: linear-gradient(rgb(254, 50, 10), rgb(254, 63, 10));
+ }
 
   .glasser {
     background: rgba(255, 255, 255, 0.034);
