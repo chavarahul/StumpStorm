@@ -2,7 +2,7 @@ import React from 'react'
 
 const Header = () => {
   return (
-    <header className="text-black py-5 px-6 flex justify-between items-end ">
+    <header className="text-black py-5 px-10 flex justify-between items-end " id='navbar'>
       <div id="header-title" className="text-3xl font-bold flex-col flex  justify-center relative">
         <span className='font-normal text-3xl textColor'>Stump</span>
         <span className='font-semibold  text-xl -mt-2'>Strom</span>
