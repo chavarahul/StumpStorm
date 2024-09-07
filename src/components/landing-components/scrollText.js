@@ -20,7 +20,7 @@ const ScrollText = () => {
         ],
     ]
   return (
-    <section className='min-h-[20vh] mt-20 relative w-full max-lg:mt-10 borders'>
+    <section className='min-h-[20vh] mt-20 relative w-full max-lg:mt-10 '>
         <div className="overflow-x-auto whitespace-nowrap Scroller">
             {
                 textGroups?.map((group,index)=>(
@@ -29,7 +29,7 @@ const ScrollText = () => {
                             group?.map((item,index)=>(
                                 <React.Fragment key={index}>
                                     <h1 className='text-9xl max-lg:text-7xl max-md:text-5xl font-semibold inline-block text-black Scroller uppercase'>{item.text}</h1>
-                                     <div className='inline-block h-[70px] max-md:w-[20px] max-md:h-[20px] rounded-full w-[70px] max-lg:w-[40px] max-lg:h-[40px] bg-[#FE320A] mx-[2rem]'></div>
+                                     <div className='inline-block -mt-10 h-[70px] max-md:w-[20px] max-md:h-[20px] rounded-full w-[70px] max-lg:w-[40px] max-lg:h-[40px] bg-[#FE320A] mx-[2rem]'></div>
                                 </React.Fragment>
                             ))
                         }

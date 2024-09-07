@@ -169,3 +169,26 @@ video{
         transform: translateX(-250%);
     }
 }
+
+/* Define the infinite scroll animation */
+@keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  .tournament-container {
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+    animation: scroll 30s linear infinite; /* Adjust duration for scrolling speed */
+  }
+  
+  .tournament-item {
+    display: inline-block;
+    margin-right: 2rem; /* Adjust for desired gap */
+  }
+  

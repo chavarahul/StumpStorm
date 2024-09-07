@@ -2,18 +2,17 @@ import React from 'react';
 
 const Page2Bottom = () => {
   return (
-    <div className="h-[80vh] w-full py-[4.5vw] flex items-center justify-between relative z-10">
-      <h1 className="text-[4vw] w-[60%] leading-[4vw]">
-        We are a group of design-driven, goal-focused creators, producers, and designers who believe that the details make all the difference.
-      </h1>
-      <div className="w-[20%]">
+    <div className="min-h-[50vh] w-full py-[4.5vw] lg:mt-20 mt-10 px-10 flex items-center justify-between relative z-10">
+      <h1 className="text-[3vw] w-[60%] leading-[4vw] text-black font-semibold">
+      Immerse yourself in the world of cricket with our dynamic platform, where tournaments come alive through seamless interactions and unparalleled excitement </h1>
+      <div className="w-[20%] -mt-10">
         <img
-          src="https://uploads-ssl.webflow.com/64d3dd9edfb41666c35b15b7/64d3dd9edfb41666c35b15d1_Holding_thumb-p-500.jpg"
+          src={"https://i.pinimg.com/1200x/d1/32/0f/d1320feaa1cd18aeff4d6ba6550399e0.jpg"}
           alt="Holding Thumb"
-          className="w-full rounded-lg"
+          className="w-full rounded-[20px]"
         />
-        <p className="font-light mt-2 text-[1vw]">
-          We love to create, we love to solve, we love to collaborate, and we love to turn amazing ideas into reality. We’re here to partner with you through every step of the process and know that relationships are the most important things we build.
+        <p className="font-normal mt-2 text-[1vw] text-black">
+        Passionate about bringing cricket to life, solving challenges, and collaborating to turn your vision into reality.
         </p>
       </div>
     </div>
