@@ -20,7 +20,7 @@ const ScrollText = () => {
         ],
     ]
   return (
-    <section className='min-h-[20vh] mt-20 relative w-full max-lg:mt-10 '>
+    <section className='min-h-[20vh] max-lg:min-h-[10vh] mt-20 relative w-full max-lg:mt-10 '>
         <div className="overflow-x-auto whitespace-nowrap Scroller">
             {
                 textGroups?.map((group,index)=>(
