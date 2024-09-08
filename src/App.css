@@ -169,7 +169,6 @@ video{
     }
 }
 
-/* Define the infinite scroll animation */
 @keyframes scroll {
     0% {
       transform: translateX(0);
@@ -183,12 +182,12 @@ video{
     white-space: nowrap;
     overflow: hidden;
     width: 100%;
-    animation: scroll 30s linear infinite; /* Adjust duration for scrolling speed */
+    animation: scroll 30s linear infinite; 
   }
   
   .tournament-item {
     display: inline-block;
-    margin-right: 2rem; /* Adjust for desired gap */
+    margin-right: 2rem;
   }
 
    .borderSide> img{
@@ -200,7 +199,7 @@ video{
    .card {
     overflow: visible;
     width: 350px;
-    height: 300px;
+    height: 350px;
   }
   
   .content {

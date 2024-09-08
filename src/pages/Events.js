@@ -96,7 +96,7 @@ const EventsPage = () => {
                 </div>
                 <div className="front-content p-4">
                   <small className="badge text-md font-semibold text-white">{event.title}</small>
-                  <div className="description mt-4">
+                  <div className="description mt-4 w-2/3">
                     <p className="font-semibold text-sm text-white">{event.location}</p>
                     <p className="card-footer text-md text-gray-600">{event.date} &nbsp; | &nbsp; {event.timings}</p>
                     <button className="Btn absolute top-4 right-6">
