@@ -1,5 +1,4 @@
-import React, { useEffect, useRef } from 'react';
-import { FaCalendarAlt, FaMapMarkerAlt, FaClock } from 'react-icons/fa';
+import React, { useEffect} from 'react';
 import gsap, { Power4 } from 'gsap';
 import { useNavigate } from 'react-router-dom';
 
@@ -49,26 +48,26 @@ const events = [
 ];
 
 const EventsPage = () => {
-  const cardsRef = useRef([]);
-  const navigate = useNavigate(); 
-
+  const navigate = useNavigate();
 
   useEffect(() => {
-    const tl = gsap.timeline();
-    tl.fromTo(
-      '.event-heading',
-      { opacity: 0, y: -50 },
-      { opacity: 1, y: 0, duration: 1, ease:Power4.easeInOut, delay: 0.5 }
-    ).fromTo(
-      '.event-card',
+    gsap.fromTo(
+      '.card',
       { opacity: 0, y: 100 },
-      { opacity: 1, y: 0, duration: 1, stagger: 0.7, ease:Power4.easeInOut }
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        stagger: 0.3,
+        ease: Power4.easeInOut,
+        delay: 0.5,
+      }
     );
   }, []);
 
   const handleClick = (eventImage) => {
-    navigate('/form',{state:{image:eventImage}})
-  }
+    navigate('/form', { state: { image: eventImage } });
+  };
 
   return (
     <div className="py-10 px-20 max-md:px-7">
@@ -76,34 +75,41 @@ const EventsPage = () => {
       <p className="text-center mb-14 text-gray-600">
         Discover and apply for our upcoming cricket tournaments. Click on "Apply" to get more details and register.
       </p>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-20">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 place-items-center">
         {events.map((event, index) => (
           <div
             key={index}
-            className="event-card border rounded-[20px] overflow-hidden shadow-lg pb-5 bg-white min-h-[500px]"
-            ref={(el) => (cardsRef.current[index] = el)}
+            className="card relative bg-white shadow-lg overflow-hidden rounded-lg"
+            onClick={() => handleClick(event.image)}
           >
-            <img src={event.image} alt={event.title} className="w-full h-72 object-cover" />
-            <div className="px-4">
-              <h2 className="text-xl font-semibold mb-2">{event.title}</h2>
-              <div className="flex items-center mb-2">
-                <FaCalendarAlt className="text-neutral-900 mr-2" />
-                <p className="text-neutral-900"><strong>Date :</strong> {event.date}</p>
+            <div className="content">
+              <div className="back">
+                <div className="back-content">
+                  <img src={event.image} alt="" className="w-[95%] h-[95%] " />
+                </div>
               </div>
-              <div className="flex items-center mb-2">
-                <FaMapMarkerAlt className="text-neutral-900 mr-2" />
-                <p className="text-neutral-900"><strong>Location :</strong> {event.location}</p>
+              <div className="front">
+                <div className="img">
+                  <div className="circle"></div>
+                  <div className="circle" id="right"></div>
+                  <div className="circle" id="bottom"></div>
+                </div>
+                <div className="front-content p-4">
+                  <small className="badge text-md font-semibold text-white">{event.title}</small>
+                  <div className="description mt-4">
+                    <p className="font-semibold text-sm text-white">{event.location}</p>
+                    <p className="card-footer text-md text-gray-600">{event.date} &nbsp; | &nbsp; {event.timings}</p>
+                    <button className="Btn absolute top-4 right-6">
+                      <div className="sign">
+                        <svg viewBox="0 0 512 512">
+                          <path d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32z" />
+                        </svg>
+                      </div>
+                      <div className="text">Apply</div>
+                    </button>
+                  </div>
+                </div>
               </div>
-              <div className="flex items-center mb-4">
-                <FaClock className="text-neutral-900 mr-2" />
-                <p className="text-neutral-900"><strong>Timings :</strong> {event.timings}</p>
-              </div>
-              <button className="learn-more button" onClick={()=>{handleClick(event.image)}}>
-                <span className="circle" aria-hidden="true">
-                  <span className="icon arrow"></span>
-                </span>
-                <span className="button-text">Apply Now</span>
-              </button>
             </div>
           </div>
         ))}

@@ -1,4 +1,4 @@
-import gsap, { Power0, Power4 } from 'gsap'
+import gsap, { Power4 } from 'gsap'
 import React, { useEffect } from 'react'
 
 const Loader = () => {
