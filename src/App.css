@@ -107,7 +107,6 @@
 
 #hero-2 {
     background: linear-gradient(#FE320A, #fe3f0a);
-
     height: 30vw;
     width: 30vw;
     border-radius: 50%;
@@ -278,4 +277,10 @@ video{
    
    .button:hover .button-text {
     color: #fff;
+   }
+
+   .borderSide> img{
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+
    }
