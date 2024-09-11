@@ -25,7 +25,7 @@ const HorizontalScrollCarousel = () => {
 
                 ScrollTrigger.create({
                     trigger: sectionRef.current,
-                    start: isDesktop ? "top 45%" : isTablet ? "top 35%" : "top 15%",
+                    start: isDesktop ? "top 45%" : isTablet ? "top 35%" : "top 30%",
                     onEnter: () => {
                         gsap.to("body", { backgroundColor: "#171717", duration: 1 });
                         document.querySelectorAll(".textColorChange").forEach((el) => {
@@ -60,8 +60,7 @@ const HorizontalScrollCarousel = () => {
     }, []);
 
     return (
-        <section ref={sectionRef} className="relative min-h-[70vh] mt-20 px-10 ">
-           
+        <section ref={sectionRef} className="relative min-h-[70vh] mt-20 px-10 max-md:mt-10">
             <TimelineDemo/>
         </section>
     );

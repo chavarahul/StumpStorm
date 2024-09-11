@@ -29,13 +29,13 @@ export const Timeline = ({
       className="w-full  dark:bg-neutral-950 font-sans md:px-10"
       ref={containerRef}>
       <div className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10">
-        <h2 className="text-lg md:text-4xl mb-4 textColorChange font-bold max-w-4xl">
-          Changelog from my journey
+        <h2 className="text-lg md:text-4xl mb-4 textColorChange text-black font-bold max-w-4xl">
+          Stump Storm Tournaments: A Journey Through Time
         </h2>
         <p
-          className="textColorChange text-sm md:text-base max-w-sm">
-          I&apos;ve been working on Aceternity for the past 2 years. Here&apos;s
-          a timeline of my journey.
+          className="textColorChange text-black text-sm md:text-base w-[80%] max-md:w-full leading-8">
+          Over the past 2 years, the Stump Storm Organization has held multiple cricket tournaments across formats, nurturing talent and creating unforgettable moments in cricket history. Here's a timeline of our journey.
+
         </p>
       </div>
       <div ref={ref} className="relative max-w-7xl mx-auto pb-20">
