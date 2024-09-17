@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 const Hero = () => {
   const words = ['Join exciting cricket tournaments, feel', ' the spirit of the game, and enjoy a', 'seamless, engaging user experience', ' on our platform!'];
   const words2 = ['Cricket', 'play', 'experience']

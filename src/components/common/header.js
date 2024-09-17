@@ -12,7 +12,7 @@ const Header = () => {
       </Link>
       <nav className="flex  gap-[1.8vw] items-center" id='nav-part2'>
         <h4 className='font-bold'><Link to="/" className="font-semibold">Home</Link></h4>
-        <h4 className='font-bold'><HashLink to={"/#about"} className="font-semibold">About</HashLink></h4>
+        <h4 className='font-bold'><Link to={"/Faq"} className="font-semibold">Faq</Link></h4>
         <h4 className='font-bold'><Link to="/events" className="font-semibold">Events</Link></h4>
       </nav>
     </header>
