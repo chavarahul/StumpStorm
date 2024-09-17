@@ -22,7 +22,7 @@ const Hero = () => {
           <div className="w-full  xl:min-h-[54vh] min-h-[35vh] flex items-end flex-col justify-end">
             {
               words2?.map((t, ind) => (
-                <div className="w-full xl:h-[9rem] -z-20 max-xl:h-[8.1rem] max-lg:h-[7rem] max-md:h-[5.5rem]  overflow-hidden flex items-end justify-end">
+                <div className="w-full xl:h-[9rem] max-xl:h-[8.1rem] max-lg:h-[7rem] max-md:h-[5.5rem]  overflow-hidden flex items-end justify-end">
                   <p className='w-full h-full text-black font-bold xl:text-[7rem] lg:text-[5.8rem] md:text-[4.9rem] sm:text-5xl text-5xl uppercase' id='textHideShow'>{t}</p>
                 </div>
               ))

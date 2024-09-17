@@ -1,7 +1,11 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { z } from 'zod';
 
 export default function LoginPage() {
+
+  const navigate = useNavigate();
+  const [errors, setErrors] = useState({});
   const [formData, setformData] = useState({
     email: '',
     password: '',
@@ -12,15 +16,37 @@ export default function LoginPage() {
     const value = e.target.value;
     setformData((d) => ({ ...d, [name]: value }))
   }
+
+  const loginSchema = z.object({
+    email: z.string().email("Invalid email format"),
+    password: z.string().min(6, "Password must be at least 6 characters long"),
+  })
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const result = loginSchema.safeParse(formData);
+    if (!result.success) {
+      const fieldErrors = {};
+      result.error.issues.forEach((issue) => {
+        fieldErrors[issue.path[0]] = issue.message;
+      });
+      setErrors(fieldErrors);
+      return;
+    }
+    navigate("/")
+  }
+
   return (
     <div className="min-h-screen flex flex-col items-center justify-center ">
       <div className="flex flex-col lg:flex-row items-center justify-between  h-screen w-full bg-white">
         <div className="max-lg:order-3 w-full lg:w-[30%] p-10 max-md:px-4  h-full">
           <div className="relative">
             <p className={` text-gray-900 ml-1 mb-1 `}>Stump Storm</p>
-            <h1 className={` text-black uppercase text-7xl font-normal`}>Login</h1>
+            <h1 className={` text-black uppercase text-7xl font-normal max-md:text-5xl`}>Login</h1>
           </div>
-          <form className="mt-28 max-lg:mt-10" method="post">
+          {errors.password && <p className="mt-3 font-semibold text-red-500">{errors.password}</p>}
+          {errors.email && <p className="mt-3 font-semibold text-red-500">{errors.email}</p>}
+          <form className="mt-28 max-lg:mt-10" method="post" onSubmit={handleSubmit}>
             <div className="mb-4">
               <label htmlFor="email" className={`block text-gray-700 mb-1 font-semibold `}>
                 Email address

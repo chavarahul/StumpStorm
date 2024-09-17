@@ -445,3 +445,10 @@ video{
     background-size: cover;
     background-position: center;
   }
+
+  .bgImage2{
+    background: url('https://img.freepik.com/free-photo/cricket-equipments-green-grass_53876-63200.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
