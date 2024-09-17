@@ -1,8 +1,7 @@
 import './App.css';
 import { SmoothScroll, LayoutProvider } from './components/common/index';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import { Form, EventsPage, MainPage } from './pages/index';
-import FAQ from './pages/FAQ';
+import { Form, EventsPage, MainPage,FAQ } from './pages/index';
 
 function App() {
   return (
