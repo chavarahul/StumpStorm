@@ -50,7 +50,7 @@ import StickyScrollRevealDemo from '../components/ui-components/sticky-roll';
 // ];
 
 const EventsPage = () => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   useEffect(() => {
     gsap.fromTo(

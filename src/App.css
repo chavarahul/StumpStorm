@@ -439,3 +439,9 @@ video{
     transform: translate(2px, 2px);
   }
   
+  .bgImage{
+    background: url('https://cdn.magicdecor.in/com/2023/10/09151326/Cricket-Player-wallpaper-for-Walls.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
