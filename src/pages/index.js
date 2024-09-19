@@ -1,5 +1,5 @@
 import EventsPage from "./Events";
-import FormPage from "./Form";
+import FormPage from "./MultiPage";
 import MainPage from "./Main";
 import FAQ from "./FAQ";
 import Register from "./Register";
