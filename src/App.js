@@ -1,11 +1,12 @@
 import './App.css';
-import { SmoothScroll, LayoutProvider } from './components/common/index';
+import { SmoothScroll, LayoutProvider , Toast } from './components/common/index';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { Form, EventsPage, MainPage,FAQ, Login, Register } from './pages/index';
 
 function App() {
   return (
     <SmoothScroll>
+      <Toast/>
       <Router>
         <LayoutProvider>
           <Routes>
