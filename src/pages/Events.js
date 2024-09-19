@@ -53,7 +53,7 @@ const EventPage = () => {
       <h1 className="text-4xl font-semibold text-center mb-8">Upcoming Events</h1>
       <div className="flex flex-wrap justify-evenly gap-8 mt-10 max-lg:px-4" ref={eventRef}>
         {events.map((event, index) => (
-          <div key={index} className="border-t-[2px] border-black topUp py-4 h-[30rem] max-lg:h-[38rem] w-full sm:w-[calc(50%-1rem)] lg:w-[calc(25%-1rem)] cardHover">
+          <div key={index} className="border-t-[2px] -z-50  border-black topUp py-4 h-[30rem] max-lg:h-[38rem] w-full sm:w-[calc(50%-1rem)] lg:w-[calc(25%-1rem)] cardHover">
             <h2 className="font-semibold uppercase mb-4 mt-1">Event</h2>
             <div className="relative">
               <h4 className="text-black text-xl relative font-medium py-1 titleH">{event.title}</h4>
