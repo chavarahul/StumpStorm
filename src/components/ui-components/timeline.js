@@ -38,7 +38,7 @@ export const Timeline = ({
 
         </p>
       </div>
-      <div ref={ref} className="relative max-w-7xl mx-auto pb-20">
+      <div ref={ref} className="relative max-w-9xl max-sm:w-full   pb-20">
         {data.map((item, index) => (
           <div key={index} className="flex justify-start pt-10 md:pt-40 md:gap-10">
             <div

@@ -31,7 +31,7 @@ const Hero = () => {
         </div>
         <div className="absolute bottom-0 w-[95%] -z-20  borderColor"></div>
       </section>
-      <div id="hero-shape" className='mt-20 -z-10'>
+      <div id="hero-shape" className='mt-20 -z-10 max-md:hidden'>
         <div id="hero-1"></div>
         <div id="hero-2"></div>
         <div id="hero-3"></div>
