@@ -111,7 +111,7 @@ export default function Register() {
           </form>
         </div>
 
-        <div className="max-lg:order-1 w-full order-2 lg:w-[70%] bg-black h-full flex-center relative">
+        <div className="max-lg:order-1 w-full order-2 lg:w-[70%]  h-full flex-center relative">
           <div className="w-full h-full bgImage2 flex relative"></div>
         </div>
       </div>

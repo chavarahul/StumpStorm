@@ -94,7 +94,7 @@ export default function LoginPage() {
           </form>
         </div>
 
-        <div className="max-lg:order-1 w-full lg:w-[70%] bg-black  h-full flex-center relative">
+        <div className="max-lg:order-1 w-full lg:w-[70%] h-full flex-center relative">
           <div className="w-full h-full bgImage  flex relative">
           </div>
         </div>

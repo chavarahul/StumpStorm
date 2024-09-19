@@ -2,12 +2,14 @@ import React, { useState } from 'react'
 import { StepOne, StepTwo, StepTracker } from '../components/form-components/index'
 import gsap from 'gsap';
 import toast from 'react-hot-toast';
-import {useNavigate} from 'react-router-dom'
+import {useNavigate,useLocation} from 'react-router-dom'
 
 const Form = () => {
 
     const navigate = useNavigate();
     const [step, setStep] = useState(1);
+    const location = useLocation();
+    const event = location.state;
     const [formData, setFormData] = useState({
         teamLeaderName: '',
         teamName: '',
@@ -44,12 +46,13 @@ const Form = () => {
             <div className="w-1/2 max-lg:w-full max-md:p-4 p-10 min-h-screen max-lg:bg-[#f6f7e9] max-lg:min-h-[15vh] flex-col flex ">
                 <h1 className='font-semibold text-4xl text-black max-lg:text-2xl'>Stump Storm Organization Cricket Registration</h1>
                 <p className='text-gray-500 text-xl mt-3'>Welcome to the registration page!</p>
-                <div className=" min-h-[33vh] max-lg:hidden flex-col flex justify-evenly mt-5">
+                <div className=" min-h-[50vh] max-lg:hidden flex-col flex justify-evenly mt-5 ">
                     <h3 className='text-black text-2xl font-medium'>Event Details</h3>
-                    <p className=' capitalize text-black font-normal'>title</p>
-                    <p className=' capitalize text-black font-normal'>Location: </p>
-                    <p className=' capitalize text-black font-normal'>Date: </p>
-                    <p className=' capitalize text-black font-normal'>Timings: </p>
+                    <img src={event.image} alt="" className='w-1/2 h-1/2 rounded-xl' />
+                    <p className=' capitalize text-black font-normal'>{event.title}</p>
+                    <p className=' capitalize text-black font-normal'>Location: {event.location} </p>
+                    <p className=' capitalize text-black font-normal'>Date: {event.date}</p>
+                    <p className=' capitalize text-black font-normal'>Timings: {event.timings}</p>
                 </div>
                 <div className=""></div>
             </div>
