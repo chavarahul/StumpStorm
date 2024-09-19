@@ -9,21 +9,21 @@ const Loader = () => {
             duration: 0.8,
             delay: 4.2,
             ease: Power4.easeIn
-        }).fromTo('#navbar',{
-            y:-100,
-            duration:0.7,
-            delay:1.1
-        },{
-            y:0,
-            duration:0.7,
-            delay:0.2
-        }).fromTo('#textHideShow',{
-            y:200
-        },{
-            y:0,
-            duration:1,
-            ease:'power3.inOut',
-            stagger:0.5
+        }).fromTo('#navbar', {
+            y: -100,
+            duration: 0.7,
+            delay: 1.1
+        }, {
+            y: 0,
+            duration: 0.7,
+            delay: 0.2
+        }).fromTo('#textHideShow', {
+            y: 200
+        }, {
+            y: 0,
+            duration: 1,
+            ease: 'power3.inOut',
+            stagger: 0.5
         })
     }, []);
     return (

@@ -70,7 +70,7 @@ const Header = () => {
         >
           <nav className="flex flex-col gap-4 z-[9999]">
             <h4 className="font-bold ">
-              <Link to="/" className="font-semibold  hover:text-red-500" onClick={()=>console.log('dd')}>Home</Link>
+              <Link to="/" className="font-semibold  hover:text-red-500" onClick={() => console.log('dd')}>Home</Link>
             </h4>
             <h4 className="font-bold">
               <Link to="/Faq" className="font-semibold">Faq</Link>

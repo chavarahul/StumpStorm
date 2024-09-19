@@ -8,9 +8,9 @@ const LayoutProvider = ({ children }) => {
 
     return (
         <>
-            {(location.pathname !== '/form'  && location.pathname !== '/login' && location.pathname !== '/register' ) && <Header />}
+            {(location.pathname !== '/form' && location.pathname !== '/login' && location.pathname !== '/register') && <Header />}
             {children}
-            {(location.pathname !== '/form' && location.pathname !== '/register' && location.pathname !== '/login'  ) && <Footer />}
+            {(location.pathname !== '/form' && location.pathname !== '/register' && location.pathname !== '/login') && <Footer />}
         </>
     )
 }

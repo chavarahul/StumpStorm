@@ -4,13 +4,13 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins" !important;
 }
- 
+
 :where(body, html) {
   overflow-x: hidden;
 }
@@ -38,13 +38,14 @@ img {
 @layer utilities {
   .textBgColor {
     color: transparent;
-    background: linear-gradient(to right,orange,orangered);
+    background: linear-gradient(to right, orange, orangered);
     -webkit-background-clip: text;
   }
 
-  .textColor{
+  .textColor {
     color: #FE320A;
   }
+
   .fontless {
     font-weight: 300 !important;
   }
@@ -53,13 +54,13 @@ img {
     transition: 1s ease-in-out;
   }
 
-  .sideBarTextColor{
+  .sideBarTextColor {
     color: #6b6891;
   }
 
- .bgLinear{
-  background: linear-gradient(rgb(254, 50, 10), rgb(254, 63, 10));
- }
+  .bgLinear {
+    background: linear-gradient(rgb(254, 50, 10), rgb(254, 63, 10));
+  }
 
   .glasser {
     background: rgba(255, 255, 255, 0.034);
@@ -124,18 +125,21 @@ img {
   width: 0px;
 }
 
-.animate-bouncer{
+.animate-bouncer {
   animation: animationer 3s ease-in-out infinite forwards;
 }
+
 @keyframes animationer {
-  0%{
-    transform: translateY(-30px) ;
-    
+  0% {
+    transform: translateY(-30px);
+
   }
-  50%{
+
+  50% {
     transform: translateY(30px);
   }
-  100%{
-    transform: translateY(-30px) ;
+
+  100% {
+    transform: translateY(-30px);
   }
 }

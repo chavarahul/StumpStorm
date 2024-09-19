@@ -1,6 +1,6 @@
 import React from "react";
 import { Timeline } from "../ui-components/timeline";
-import { event1,event2,event3,event4,event5,event6 } from "../assets/images/index";
+import { event1, event2, event3, event4, event5, event6 } from "../assets/images/index";
 
 export function TimelineDemo() {
   const data = [

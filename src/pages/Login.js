@@ -35,7 +35,7 @@ export default function LoginPage() {
       return;
     }
     toast.success('Successfully Logined');
-    navigate("/")
+    navigate("/");
   }
 
   return (
@@ -93,7 +93,6 @@ export default function LoginPage() {
             </p>
           </form>
         </div>
-
         <div className="max-lg:order-1 w-full lg:w-[70%] h-full flex-center relative">
           <div className="w-full h-full bgImage  flex relative">
           </div>

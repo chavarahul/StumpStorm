@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { StepOne, StepTwo, StepTracker } from '../components/form-components/index'
 import gsap from 'gsap';
 import toast from 'react-hot-toast';
-import {useNavigate,useLocation} from 'react-router-dom'
+import { useNavigate, useLocation } from 'react-router-dom'
 
 const Form = () => {
 

@@ -8,7 +8,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const HorizontalScrollCarousel = () => {
     const sectionRef = useRef(null);
-    
+
 
     useEffect(() => {
         gsap.registerPlugin(ScrollTrigger);
@@ -61,7 +61,7 @@ const HorizontalScrollCarousel = () => {
 
     return (
         <section ref={sectionRef} className="relative min-h-[70vh] mt-20 px-10 max-sm:px- max-md:mt-10">
-            <TimelineDemo/>
+            <TimelineDemo />
         </section>
     );
 };
