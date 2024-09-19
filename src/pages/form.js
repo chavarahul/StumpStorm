@@ -4,7 +4,7 @@ import gsap from 'gsap';
 import toast from 'react-hot-toast';
 import { useNavigate, useLocation } from 'react-router-dom'
 
-const Form = () => {
+const FormPage = () => {
 
     const navigate = useNavigate();
     const [step, setStep] = useState(1);
@@ -89,4 +89,4 @@ const Form = () => {
     )
 }
 
-export default Form
+export default FormPage
