@@ -60,7 +60,7 @@ const HorizontalScrollCarousel = () => {
     }, []);
 
     return (
-        <section ref={sectionRef} className="relative min-h-[70vh] mt-20 px-10 max-md:mt-10">
+        <section ref={sectionRef} className="relative min-h-[70vh] mt-20 px-10 max-sm:px- max-md:mt-10">
             <TimelineDemo/>
         </section>
     );

@@ -1,9 +1,12 @@
 import React, { useState } from 'react'
 import { StepOne, StepTwo, StepTracker } from '../components/form-components/index'
 import gsap from 'gsap';
+import toast from 'react-hot-toast';
+import {useNavigate} from 'react-router-dom'
 
 const Form = () => {
 
+    const navigate = useNavigate();
     const [step, setStep] = useState(1);
     const [formData, setFormData] = useState({
         teamLeaderName: '',
@@ -13,6 +16,8 @@ const Form = () => {
 
     const handleSubmit = () => {
         console.log(formData);
+        toast.success('Successfully registered');
+        navigate("/events")
     }
 
     const handleFormData = (input, value) => {

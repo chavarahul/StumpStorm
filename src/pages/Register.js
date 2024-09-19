@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import toast from "react-hot-toast";
 import { Link, useNavigate } from "react-router-dom";
 import { z } from 'zod';
 
@@ -35,6 +36,7 @@ export default function Register() {
       setErrors(fieldErrors);
       return;
     }
+    toast.success('Successfully registered')
     navigate("/");
   };
 

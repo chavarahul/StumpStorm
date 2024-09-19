@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react';
-import gsap, { Power4 } from 'gsap';
+import React, { useEffect, useRef } from 'react';
+import gsap from 'gsap';
 
 const events = [
   {
@@ -23,50 +23,40 @@ const events = [
     timings: '09:00 AM - 03:00 PM',
     title: 'Bangalore Cricket Cup',
   },
-  {
-    image: 'https://img.freepik.com/free-vector/gradient-ipl-cricket-poster_23-2149195559.jpg',
-    date: '2024-10-01',
-    location: 'M. A. Chidambaram Stadium, Chennai',
-    timings: '12:00 PM - 06:00 PM',
-    title: 'Chennai Super T20',
-  },
-  {
-    image: 'https://image.isu.pub/240514102214-e800f615e9a0d93a89d749db24bb8b63/jpg/page_1.jpg',
-    date: '2024-10-10',
-    location: 'Eden Gardens, Kolkata',
-    timings: '01:00 PM - 07:00 PM',
-    title: 'Kolkata Cricket Festival',
-  },
-  {
-    image: 'https://marketplace.canva.com/EAF7vIr-qCM/2/0/1600w/canva-blue-and-grey-refined-sports-cricket-event-flyer-HrAZlW1waP4.jpg',
-    date: '2024-10-15',
-    location: 'Rajiv Gandhi International Cricket Stadium, Hyderabad',
-    timings: '02:00 PM - 08:00 PM',
-    title: 'Hyderabad Cricket Championship',
-  },
 ];
 
-const EventsPage = () => {
+const EventPage = () => {
+  const eventRef = useRef(null);
 
   useEffect(() => {
-    gsap.fromTo(
-      '.card',
-      { opacity: 0, y: 100 },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 1,
-        stagger: 0.3,
-        ease: Power4.easeInOut,
-        delay: 0.5,
-      }
-    );
+    gsap.from(eventRef.current, { opacity: 0, duration: 1.5, y: 20, ease: 'power3.out', stagger: 0.3 });
   }, []);
-  return (
-    <div className="py-10 px-20 max-md:px-7 h-screen borders">
 
+  return (
+    <div className="container mx-auto p-8 text-black">
+      <h1 className="text-4xl font-bold text-center mb-8">Upcoming Events</h1>
+      <div className="space-y-12" ref={eventRef}>
+        {events.map((event, index) => (
+          <div key={index} className=" shadow-md rounded-lg p-6">
+            {/* Title */}
+            <h2 className="text-3xl font-bold text-gray-800 mb-4 text-center">{event.title}</h2>
+
+            {/* Date and Location */}
+            <div className="text-center mb-4">
+              <p className="text-lg text-gray-600"><strong>Date:</strong> {event.date}</p>
+              <p className="text-lg text-gray-600"><strong>Location:</strong> {event.location}</p>
+              <p className="text-lg text-gray-600"><strong>Timings:</strong> {event.timings}</p>
+            </div>
+
+            {/* Image */}
+            <div className="flex justify-center">
+              <img src={event.image} alt={event.title} className="rounded-lg max-w-full h-auto" />
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
 
-export default EventsPage;
+export default EventPage;
