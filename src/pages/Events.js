@@ -1,4 +1,4 @@
-import React, { useEffect} from 'react';
+import React, { useEffect } from 'react';
 import gsap, { Power4 } from 'gsap';
 
 const events = [
@@ -62,10 +62,9 @@ const EventsPage = () => {
       }
     );
   }, []);
-
-
   return (
     <div className="py-10 px-20 max-md:px-7 h-screen borders">
+
     </div>
   );
 };
