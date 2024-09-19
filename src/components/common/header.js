@@ -6,24 +6,17 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const menuRef = useRef(null);
 
-  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   useEffect(() => {
     if (isMenuOpen) {
       gsap.fromTo(
         menuRef.current,
         { opacity: 0, y: -20 },
-        { opacity: 1, y: 0,        zIndex:'99999',
-          duration: 0.3 }
+        { opacity: 1, y: 0, duration: 0.3 }
       );
-    } else {
-      gsap.to(menuRef.current, {
-        opacity: 0,
-        y: -20,
-        duration: 0.3,
-        zIndex:'99999',
-        onComplete: () => menuRef.current.style.display = 'none'
-      });
     }
   }, [isMenuOpen]);
 
@@ -31,9 +24,8 @@ const Header = () => {
     <header className="text-black py-5 px-10 flex justify-between items-end" id="navbar">
       <Link to="/" id="header-title" className="text-3xl font-bold flex-col flex justify-center relative">
         <span className="font-normal text-3xl textColor">Stump</span>
-        <span className="font-semibold text-xl -mt-2">Strom</span>
+        <span className="font-semibold text-xl -mt-2">Storm</span>
       </Link>
-
       <div className="w-2/3 flex-bet relative max-lg:hidden">
         <nav className="flex gap-[1.8vw] items-center" id="nav-part2">
           <h4 className="font-bold">
@@ -71,31 +63,32 @@ const Header = () => {
         </svg>
       </button>
 
-      <div
-        ref={menuRef}
-        className={`lg:hidden absolute z-[99999] top-20 right-10 bg-white shadow-lg rounded-lg p-4 w-60 ${isMenuOpen ? 'block' : 'hidden'}`}
-        style={{ display: isMenuOpen ? 'block' : 'none' }}
-      >
-        <nav className="flex flex-col gap-4">
-          <h4 className="font-bold">
-            <Link to="/" className="font-semibold">Home</Link>
-          </h4>
-          <h4 className="font-bold">
-            <Link to="/Faq" className="font-semibold">Faq</Link>
-          </h4>
-          <h4 className="font-bold">
-            <Link to="/events" className="font-semibold">Events</Link>
-          </h4>
-          <h4 className="font-bold">
-            <Link to="/login" className="font-semibold">Login</Link>
-          </h4>
-          <h4 className="font-bold">
-            <Link to="/register" className="font-semibold">Register</Link>
-          </h4>
-        </nav>
-      </div>
+      {isMenuOpen && (
+        <div
+          ref={menuRef}
+          className="lg:hidden absolute top-20 right-10 bg-white shadow-lg z-50 rounded-lg p-4 w-60"
+        >
+          <nav className="flex flex-col gap-4 z-[9999]">
+            <h4 className="font-bold ">
+              <Link to="/" className="font-semibold  hover:text-red-500" onClick={()=>console.log('dd')}>Home</Link>
+            </h4>
+            <h4 className="font-bold">
+              <Link to="/Faq" className="font-semibold">Faq</Link>
+            </h4>
+            <h4 className="font-bold">
+              <Link to="/events" className="font-semibold">Events</Link>
+            </h4>
+            <h4 className="font-bold">
+              <Link to="/login" className="font-semibold">Login</Link>
+            </h4>
+            <h4 className="font-bold">
+              <Link to="/register" className="font-semibold">Register</Link>
+            </h4>
+          </nav>
+        </div>
+      )}
     </header>
   );
-}
+};
 
 export default Header;

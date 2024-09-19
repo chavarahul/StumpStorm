@@ -6,7 +6,7 @@ const Hero = () => {
   const words2 = ['Cricket', 'play', 'experience']
   return (
     <>
-      <section className='relative px-10 max-md:px-5 min-h-[78vh] max-md:min-h-[60vh]  flex items-end justify-between max-xl:flex-col max-xl:justify-center'>
+      <section className='relative px-10 max-md:px-5 min-h-[78vh] max-md:min-h-[60vh] max-lg:-z-20  flex items-end justify-between max-xl:flex-col max-xl:justify-center'>
         <div className="w-1/2 max-xl:w-full max-xl:order-2  xl:min-h-[60vh] mb-10 flex items-end justify-start ">
           <div className="xl:w-[60%] w-full max-md:min-h-[25vh]  min-h-[20vh] flex items-end flex-col">
             {

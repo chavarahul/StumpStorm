@@ -42,8 +42,8 @@ const Form = () => {
         }, 500)
     }
     return (
-        <section className=' min-h-screen flex relative w-full max-lg:flex-col'>
-            <div className="w-1/2 max-lg:w-full max-md:p-4 p-10 min-h-screen max-lg:bg-[#f6f7e9] max-lg:min-h-[15vh] flex-col flex ">
+        <section className='min-h-screen flex relative w-full max-lg:flex-col'>
+            <div className="w-1/2 max-lg:w-full max-md:p-4 p-10 max-md:py-10 min-h-screen max-lg:bg-[#f6f7e9] max-lg:min-h-[15vh] flex-col flex ">
                 <h1 className='font-semibold text-4xl text-black max-lg:text-2xl'>Stump Storm Organization Cricket Registration</h1>
                 <p className='text-gray-500 text-xl mt-3'>Welcome to the registration page!</p>
                 <div className=" min-h-[50vh] max-lg:hidden flex-col flex justify-evenly mt-5 ">

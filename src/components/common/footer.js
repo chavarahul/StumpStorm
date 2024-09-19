@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <footer className={`${location.pathname === '/events' ? "min-h-[50vh]" : "min-h-[35vh] "} relative w-full flex flex-col items-center mt-10 lg:mt-28 bg-neutral-900 text-white`}>
       <div
-        className={`${location.pathname === '/events' && 'mt-10'} flex items-center justify-center min-h-[30vh] text-center uppercase xl:text-[10rem] lg:text-9xl md:text-7xl max-lg:min-h-[15vh] max-md:text-5xl max-lg:w-[90%] border-b border-[#EFEAE3] font-semibold`}
+        className={`${location.pathname === '/events' && 'mt-10'} flex items-center justify-center min-h-[30vh] max-sm:min-h-[10vh] text-center uppercase xl:text-[10rem] lg:text-9xl md:text-7xl max-lg:min-h-[15vh] max-md:text-5xl max-sm:text-4xl max-lg:w-[90%] border-b border-[#EFEAE3] font-semibold`}
       >
         Stump Storm
       </div>

@@ -36,8 +36,8 @@ const FAQ = () => {
   }, [])
 
   return (
-    <section className=" w-full flex-all max-lg:flex-col  min-h-[70vh] px-3 mt-20">
-      <div className=" w-3/2 relative min-h-[70vh] max-lg:min-h-[20vh] ">
+    <section className=" w-full flex-all max-lg:flex-col -z-50 min-h-[70vh] px-3 mt-20">
+      <div className=" w-3/2 relative min-h-[70vh] max-lg:min-h-[20vh] -z-50">
         <h3 className='text-5xl font-medium sticky top-0 max-md:text-4xl max-md:text-left overflow-hidden'>
           <p className='text-black w-full relative topUp overflow-hidden'>Frequently</p>
           <p className='text-black w-full relative  mt-2 topUp overflow-hidden'>Asked Questions</p>
