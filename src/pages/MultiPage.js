@@ -64,7 +64,7 @@ const FormPage = () => {
                     {step === 1 && <StepOne nextStep={nextStep} handleFormData={handleFormData} formData={formData} />}
                     {step === 2 && <StepTwo formData={formData} />}
                 </div>
-                <div className="relative max-lg:-mt-20 w-full flex-bet h-20">
+                <div className="relative w-full flex-bet h-20">
                     {
                         step > 1 && (
                             <button onClick={prevStep} className='bg-gray-500 text-white px-5 py-2 rounded'>Back</button>

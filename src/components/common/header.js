@@ -21,7 +21,7 @@ const Header = () => {
   }, [isMenuOpen]);
 
   return (
-    <header className="text-black py-5 px-10 flex justify-between items-end" id="navbar">
+    <header className="text-black py-5 px-10 max-md:px-5 flex justify-between items-end" id="navbar">
       <Link to="/" id="header-title" className="text-3xl font-bold flex-col flex justify-center relative">
         <span className="font-normal text-3xl textColor">Stump</span>
         <span className="font-semibold text-xl -mt-2">Storm</span>
